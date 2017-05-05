@@ -15,34 +15,29 @@ def sum(arr)
     arr.sum
 end
 
-# def multiply(numbers)
-#     result = 1
-#     numbers.each { |n| result *= n }
-#     result
-# end
+def multiply(numbers)
+    result = 1
+    numbers.each { |n| result *= n }
+    result
+end
 
-# def power(num1,num2)
-#     num1**num2
-# end
+def power(num1,num2)
+    num1**num2
+end
 
 # --Unsolved--
 
-# def factorial(num)
-#     arr = Array.new
-    
-#     arr << array_maker(num)
-#     multiply(arr)
-
-#     def multiply(ints)
-#         base = 1
-#         ints.each { |n| result *= n }
-#         result
-#     end
-
-#     def array_maker(numbers)
-#         while num > 0 do
-#             numbers -= 1
-#         end
-#     end
-# end
+def factorial(num)
+    result = 1
+    unless num == 0
+        result = 0
+    else
+        while num > 0 do
+            result = result * num
+            num -= 1
+            result
+        end
+    end
+    result
+end
 
