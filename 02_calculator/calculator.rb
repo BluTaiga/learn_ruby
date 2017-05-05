@@ -11,9 +11,9 @@ def subtract(num1,num2)
     end
 end
 
-def sum(arr)
-    arr.sum
-end
+# def sum(arr)
+#     arr.sum
+# end
 
 def multiply(numbers)
     result = 1
@@ -29,7 +29,7 @@ end
 
 def factorial(num)
     result = 1
-    unless num == 0
+    if num == 0
         result = 0
     else
         while num > 0 do
