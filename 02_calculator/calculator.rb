@@ -11,33 +11,38 @@ def subtract(num1,num2)
     end
 end
 
-def sum(ary)
-    ary.sum
+def sum(arr)
+    arr.sum
 end
 
-def multiply(numbers)
-    result = 1
-    numbers.each { |n| result *= n }
-    result
-end
+# def multiply(numbers)
+#     result = 1
+#     numbers.each { |n| result *= n }
+#     result
+# end
 
-def power(num1,num2)
-    num1**num2
-end
+# def power(num1,num2)
+#     num1**num2
+# end
 
-def factorial(num)
-    ary = Array.new
-    ary << num
-    while num > 0 do
-        num -= 1
-        ary << num
-    end
-    multiply(ary)
+# --Unsolved--
 
-    def multiply(numbers)
-        result = 1
-        numbers.each { |n| result *= n }
-        result
-    end
-end
+# def factorial(num)
+#     arr = Array.new
+    
+#     arr << array_maker(num)
+#     multiply(arr)
+
+#     def multiply(ints)
+#         base = 1
+#         ints.each { |n| result *= n }
+#         result
+#     end
+
+#     def array_maker(numbers)
+#         while num > 0 do
+#             numbers -= 1
+#         end
+#     end
+# end
 
