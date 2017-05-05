@@ -28,16 +28,15 @@ end
 # --Unsolved--
 
 def factorial(num)
+    return 0 if num == 0
     result = 1
-    if num == 0
-        result = 0
-    else
-        while num > 0 do
-            result = result * num
-            num -= 1
-            result
-        end
+
+    while num > 0 do
+        result = result * num
+        num -= 1
+        result
     end
+
     result
 end
 
