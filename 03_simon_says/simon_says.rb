@@ -14,6 +14,18 @@ end
 
 def start_of_word(word, place=1)
   place -= 1
-  arr = word.split(//)
-  arr.take()
+  word[0..place]
+end
+
+def first_word(phrase, place=0)
+  arr = phrase.split(" ")
+  arr[place]
+end
+
+def titleize(title)
+  arr = title.split(" ")
+  arr.first.capitalize!
+  arr.last.capitalize!
+  # arr.map! { |word| word.capitalize}
+  arr.join(" ")
 end

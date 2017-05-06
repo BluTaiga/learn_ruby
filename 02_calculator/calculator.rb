@@ -11,9 +11,9 @@ def subtract(num1,num2)
     end
 end
 
-# def sum(arr)
-#     arr.sum
-# end
+def sum(arr)
+    arr.sum
+end
 
 def multiply(numbers)
     result = 1
@@ -24,8 +24,6 @@ end
 def power(num1,num2)
     num1**num2
 end
-
-# --Unsolved--
 
 def factorial(num)
     return 0 if num == 0
