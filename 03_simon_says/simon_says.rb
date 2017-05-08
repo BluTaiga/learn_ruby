@@ -23,9 +23,8 @@ def first_word(phrase, place=0)
 end
 
 def titleize(title)
-  arr = title.split(" ")
-  arr.first.capitalize!
-  arr.last.capitalize!
-  # arr.map! { |word| word.capitalize}
-  arr.join(" ")
+  little_words = %w(end over and the)
+  title.capitalize.gsub(/(\w+)/) do |word|
+    little_words.include?(word) ? word : word.capitalize
+  end
 end
