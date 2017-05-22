@@ -17,13 +17,33 @@ require 'pry'
 
 
 #find the index of the first  vowels
-def translate(word)
-  the_word = word.split("")
-  vowel_index = the_word.index(/[aeiou]/)
-  #take the characters off the word up to the index number.
-  first = the_word.shift(vowel_index)
-  #shovel them at the back of the word and apptend "ay"
-  the_word << "#{first}" + "ay"
-  the_word.join
+def translate(word) 
+  word = word.split(" ")
+  word.map!{ |x| 
+    vowel_index = x.index(/[aeiou]|qu|\wqu/) 
+    if vowel_index > 0
+      first = x.slice!(0, vowel_index)
+      x << "#{first}" + "ay"
+    elsif vowel_index = 0 && x.match(/\wqu/)
+      first = x.slice!(0, 3)
+      x << "#{first}" + "ay"
+    elsif vowel_index = 0 && x.match(/qu/)
+      first = x.slice!(0, 2)
+      x << "#{first}" + "ay"
+    else
+      x << "ay"
+    end
+  }
+  word.join(" ")
 end
+  # vowel_index = word.index(/[aeiou]/)
+
+    #take the characters off the word up to the index number.
+    #shovel them at the back of the word and append "ay"
+#     word
+#   else
+#     word << "ay"
+#     word
+#   end
+# end
 
